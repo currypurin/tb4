@@ -56,8 +56,20 @@ X_train, X_test, y_train, y_test = train_test_split(X,y,random_state=0)
 ### 教師あり学習
 
 - SVM
+```python
+from sklearn.svm import SVC
+svc = SVC(kernel='linear')
+```
 - Naive Bayes
+```python
+from sklearn.naive_bayes import GaussianNB
+gnb = GaussianNB()
+```
 - KNN
+```python
+from sklearn import neighbors
+knn = neighbors.KNeighborsClassifier(n_neighbors=5)
+```
 
 ### 教師なし学習
 
