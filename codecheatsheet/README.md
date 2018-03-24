@@ -28,10 +28,14 @@ X[X < 0.7] = 0
 ```
 
 ## 前処理
-```python
-```
 
 ### 正規化
+```python
+from sklearn.preprocessing import StandardScaler
+scaler = StandardScaler().fit(X_train)
+standardized_X = scaler.transform(X_train)
+standardized_X_test = scaler.transform(X_test)
+```
 
 ### 標準化
 
