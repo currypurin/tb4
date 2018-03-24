@@ -47,7 +47,10 @@ normalized_X_test = scaler.transform(X_test)
 ### one-hot エンコーディング
 
 ## データ分割
-
+```python
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X,y,random_state=0)
+```
 ## モデル作成
 
 ### 教師あり学習
