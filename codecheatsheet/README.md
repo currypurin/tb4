@@ -74,11 +74,40 @@ knn = neighbors.KNeighborsClassifier(n_neighbors=5)
 ### 教師なし学習
 
 - 主成分分析
+```python
+from sklearn.decomposition import PCA
+pca = PCA(n_components=0.95)
+```
 - k-means
+```python
+from sklearn.cluster import KMeans
+k_means = KMeans(n_clusters=3, random_state=0)
+```
 
 ## モデルフィッテイング
+### 教師なし学習
+```python
+knn.fit(X_train, y_train)
+svc.fit(X_train, y_train)
+```
+### 教師あり学習
+```python
+k_means.fit(X_train)
+pca_model = pca.fit_transform(X_train)
+```
 
 ## 推定
+### 教師なし学習
+```python
+y_pred = svc.predict(np.random.random((2,5)))
+```
+```python
+y_pred = knn.predict_proba(X_test))
+```
+### 教師あり学習
+```python
+y_pred = k_means.predict(X_test)
+```
 
 ## モデルの評価
 
