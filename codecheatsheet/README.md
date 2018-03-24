@@ -19,6 +19,14 @@ y_pred = knn.predict(X_test)
 accuracy_score(y_test, y_pred)
 ```
 
+## データの読み込み
+```python
+import numpy as np
+X = np.random.random((10,5))
+y = np.array(['M','M','F','F','M','F','M','M','F','F','F'])
+X[X < 0.7] = 0
+```
+
 ## 前処理
 ```python
 ```
