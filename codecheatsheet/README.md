@@ -44,7 +44,11 @@ scaler = Normalizer().fit(X_train)
 normalized_X = scaler.transform(X_train)
 normalized_X_test = scaler.transform(X_test)
 ```
-### one-hot エンコーディング
+### one-hot エンコーディング(pandas)
+```python
+df = pd.get_dummies(df,columns=None)
+columns : list-like, default None
+```
 
 ## データ分割
 ```python
